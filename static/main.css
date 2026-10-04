@@ -1,15 +1,15 @@
 /* ---------- Token warna & ukuran ---------- */
 :root {
     --nav-lebar: 256px;
-    --nav-bg: #103636;
-    --nav-bg-atas: #0b2828;
+    --nav-bg: #161a23;
+    --nav-bg-atas: #0c0f15;
     --nav-teks: #d6e6e2;
-    --nav-aksen: #6fd3c3;
+    --nav-aksen: #b8c6c3;
     --latar: #f7f9f8;
     --teks: #14211f;
-    --teks-redup: #53655f;
+    --teks-redup: #5b6864;
     --garis: #dadce0;
-    --aksen: #1f7a6d;
+    --aksen: #575d5c;
     --permukaan: #ffffff;
     --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
