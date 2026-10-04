@@ -7,7 +7,7 @@
     --nav-aksen: #b8c6c3;
     --latar: #f7f9f8;
     --teks: #14211f;
-    --teks-redup: #5b6864;
+    --teks-redup: #606866;
     --garis: #dadce0;
     --aksen: #575d5c;
     --permukaan: #ffffff;
@@ -222,7 +222,7 @@ div.kanan div.konten div.sub-konten picture.profil {
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 6px;
-    background-color: #dde9e6;
+    background-color: #cfd4d3;;
 }
 
 /* Inisial tampil kalau foto belum ada / gagal dimuat */
