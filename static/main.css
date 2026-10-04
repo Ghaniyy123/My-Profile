@@ -1,0 +1,493 @@
+/* ---------- Token warna & ukuran ---------- */
+:root {
+    --nav-lebar: 256px;
+    --nav-bg: #103636;
+    --nav-bg-atas: #0b2828;
+    --nav-teks: #d6e6e2;
+    --nav-aksen: #6fd3c3;
+    --latar: #f7f9f8;
+    --teks: #14211f;
+    --teks-redup: #53655f;
+    --garis: #dadce0;
+    --aksen: #1f7a6d;
+    --permukaan: #ffffff;
+    --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body.nav-ciut {
+    --nav-lebar: 68px;
+}
+
+/* ---------- Reset ---------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, button, checkbox, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    font-size: 100%;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    vertical-align: baseline;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--teks);
+    background-color: var(--latar);
+}
+
+ul {
+    list-style: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--nav-aksen);
+    outline-offset: -3px;
+}
+
+div.separator {
+    height: 1px;
+    background-color: var(--garis);
+}
+
+/* -------- NAVIGATION START -------- */
+
+nav.kiri {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--nav-lebar);
+    overflow: hidden;
+    z-index: 20;
+    background-color: var(--nav-bg);
+    transition: width 0.2s ease;
+}
+
+nav.kiri div.nav-atas {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    height: 64px;
+    background-color: var(--nav-bg-atas);
+    color: var(--nav-teks);
+}
+
+nav.kiri div.nav-atas div.hamburger {
+    margin-left: 10px;
+}
+
+nav.kiri div.nav-atas div.hamburger button {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--nav-teks);
+    cursor: pointer;
+}
+
+nav.kiri div.nav-atas div.hamburger button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav.kiri div.nav-atas div.judul {
+    margin-left: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+nav.kiri div.nav-isi {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+nav.kiri div.nav-isi div.scroll {
+    padding-top: 8px;
+}
+
+nav.kiri div.nav-isi div.scroll ul li {
+    display: flex;
+    align-items: center;
+    height: 44px;
+}
+
+nav.kiri div.nav-isi div.scroll ul li a {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    height: 100%;
+    padding-left: 24px;
+    color: var(--nav-teks);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+nav.kiri div.nav-isi div.scroll ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+nav.kiri div.nav-isi div.scroll ul li a[aria-current="page"] {
+    background-color: rgba(255, 255, 255, 0.14);
+    box-shadow: inset 3px 0 0 var(--nav-aksen);
+    color: #ffffff;
+}
+
+nav.kiri div.nav-isi div.scroll ul li a span {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 20px;
+    margin-right: 16px;
+    color: inherit;
+    user-select: none;
+}
+
+nav.kiri div.nav-isi div.scroll ul li a .kata-nav p {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-left: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* --------NAVIGATION END---------- */
+
+/* -----------KONTEN START----------- */
+
+div.kanan {
+    margin-left: var(--nav-lebar);
+    transition: margin-left 0.2s ease;
+}
+
+div.kanan div.konten {
+    max-width: 1040px;
+    padding: 0 40px 24px;
+}
+
+div.kanan div.konten section {
+    padding-top: 40px;
+}
+
+div.kanan div.konten div.judul h1,
+div.kanan div.konten div.judul h2 {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+}
+
+div.kanan div.konten div.sub-konten {
+    display: flex;
+    margin-top: 24px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* ---- About ---- */
+
+div.kanan div.konten div.sub-konten picture.profil {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 220px;
+    height: 330px;
+    margin-right: 32px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #dde9e6;
+}
+
+/* Inisial tampil kalau foto belum ada / gagal dimuat */
+div.kanan div.konten div.sub-konten picture.profil::before {
+    content: "SG";
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--aksen);
+}
+
+div.kanan div.konten div.sub-konten picture.profil img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.kanan div.konten div.sub-konten div.side-sub {
+    flex: 1;
+    min-width: 240px;
+    align-self: flex-start;
+}
+
+div.kanan div.konten div.sub-konten div.side-sub p {
+    max-width: 62ch;
+}
+
+div.kanan div.konten div.sub-konten dl.fakta {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 6px 20px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--garis);
+}
+
+div.kanan div.konten div.sub-konten dl.fakta dt {
+    color: var(--teks-redup);
+}
+
+div.kanan div.konten div.sub-konten dl.fakta dd {
+    font-weight: 500;
+}
+
+div.kanan div.konten div.sub-konten div.i {
+    margin-top: 20px;
+    padding-left: 16px;
+    border-left: 3px solid var(--aksen);
+    color: var(--teks-redup);
+}
+
+/* ---- Skills ---- */
+
+div.kanan div.konten div.sub-konten.skill {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+div.kanan div.konten div.sub-konten.skill > div {
+    padding: 20px 22px 12px;
+    background-color: var(--permukaan);
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+}
+
+div.kanan div.konten div.sub-konten.skill h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+div.kanan div.konten div.sub-konten.skill p.ket {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--teks-redup);
+    margin-bottom: 8px;
+}
+
+div.kanan div.konten div.sub-konten.skill li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px solid var(--garis);
+}
+
+div.kanan div.konten div.sub-konten.skill li span.tingkat {
+    font-size: 14px;
+    color: var(--teks-redup);
+}
+
+div.kanan div.konten div.sub-konten.skill li span.tingkat.kuat {
+    color: var(--aksen);
+    font-weight: 500;
+}
+
+/* ---- Certificate ---- */
+
+div.kanan div.konten div.sub-konten.sertifikat {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+article.kartu-sertifikat {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--permukaan);
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+article.kartu-sertifikat .gambar {
+    aspect-ratio: 4 / 3;
+    background-color: #e8efed;
+}
+
+article.kartu-sertifikat .gambar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+article.kartu-sertifikat .isi {
+    padding: 14px 16px 16px;
+}
+
+article.kartu-sertifikat h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+article.kartu-sertifikat p {
+    font-size: 14px;
+    color: var(--teks-redup);
+    line-height: 1.5;
+}
+
+article.kartu-sertifikat a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--aksen);
+}
+
+/* ---- Contact ---- */
+
+div.kanan div.konten div.sub-konten.kontak {
+    display: block;
+}
+
+div.kanan div.konten div.sub-konten.kontak p.pengantar {
+    max-width: 62ch;
+    margin-bottom: 12px;
+}
+
+div.kanan div.konten div.sub-konten.kontak ul {
+    max-width: 520px;
+}
+
+div.kanan div.konten div.sub-konten.kontak li a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 4px;
+    border-top: 1px solid var(--garis);
+    color: var(--teks);
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+div.kanan div.konten div.sub-konten.kontak li:last-child a {
+    border-bottom: 1px solid var(--garis);
+}
+
+div.kanan div.konten div.sub-konten.kontak li a:hover {
+    background-color: #eef3f1;
+}
+
+div.kanan div.konten div.sub-konten.kontak li a .material-symbols-outlined {
+    color: var(--aksen);
+    font-size: 22px;
+}
+
+div.kanan div.konten div.sub-konten.kontak li a .nama {
+    font-weight: 500;
+    min-width: 80px;
+}
+
+div.kanan div.konten div.sub-konten.kontak li a .nilai {
+    color: var(--teks-redup);
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+footer.kaki {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--garis);
+    font-size: 14px;
+    color: var(--teks-redup);
+}
+
+/* -----------KONTEN END----------- */
+
+/* Tablet: sidebar jadi rail ikon (JS menambah .nav-ciut) */
+@media (min-width: 578px) and (max-width: 992px) {
+    div.kanan div.konten {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+/* Mobile: sidebar jadi bar atas, menu terbuka menutupi layar */
+@media (max-width: 577px) {
+    body nav.kiri,
+    body.nav-ciut nav.kiri {
+        width: 100%;
+        bottom: auto;
+        height: 64px;
+        transition: height 0.25s ease;
+    }
+
+    body.nav-buka nav.kiri {
+        height: 100%;
+    }
+
+    nav.kiri div.nav-isi {
+        visibility: hidden;
+    }
+
+    body.nav-buka nav.kiri div.nav-isi {
+        visibility: visible;
+    }
+
+    div.kanan,
+    body.nav-ciut div.kanan {
+        margin-left: 0;
+        margin-top: 64px;
+    }
+
+    div.kanan div.konten {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    div.kanan div.konten section {
+        scroll-margin-top: 64px;
+    }
+
+    div.kanan div.konten div.judul h1,
+    div.kanan div.konten div.judul h2 {
+        font-size: 28px;
+    }
+
+    div.kanan div.konten div.sub-konten picture.profil {
+        width: 100%;
+        max-width: 240px;
+        margin-right: 32px;
+    }
+}

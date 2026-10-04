@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="static\main.css">
+    <script src="main.js" defer></script>
+    <title>G~ Profile</title>
+</head>
+
+<body>
+    <nav class="kiri" aria-label="Menu utama">
+
+        <div class="nav-atas">
+            <div class="hamburger">
+                <button type="button" id="tombol-nav" aria-label="Buka atau tutup menu" aria-expanded="true" title="Menu" class="material-symbols-outlined">
+                    menu
+                </button>
+            </div>
+            <div class="judul">
+                <p>My Profile</p>
+            </div>
+        </div>
+
+        <div class="nav-isi">
+            <div class="scroll">
+                <ul>
+                    <li>
+                        <a aria-current="page" href="#PROFIL">
+                            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                            <div class="kata-nav">
+                                <p>About Me</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#SKILL">
+                            <span class="material-symbols-outlined" aria-hidden="true">manufacturing</span>
+                            <div class="kata-nav">
+                                <p>Skills</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#SERTIFIKAT">
+                            <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+                            <div class="kata-nav">
+                                <p>Certificate</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#KONTAK">
+                            <span class="material-symbols-outlined" aria-hidden="true">contact_support</span>
+                            <div class="kata-nav">
+                                <p>Contact</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="kanan">
+
+        <div class="konten">
+
+            <section class="PROFIL" id="PROFIL">
+                <div class="judul">
+                    <h1>Sulthan Ghaniyy Halim</h1>
+                    <div class="separator"></div>
+                </div>
+                <div class="sub-konten">
+                    <!-- Taruh foto di folder yang sama, namanya foto.jpg (atau ganti src di bawah).
+                         Kalau file belum ada, yang tampil adalah inisial "SG". -->
+                    <picture class="profil">
+                        <img src="foto.jpg" alt="Foto Sulthan Ghaniyy Halim" onerror="this.remove()">
+                    </picture>
+                    <div class="side-sub">
+                        <p>
+                            Mahasiswa Informatika Universitas Gunadarma yang berfokus pada Web
+                            Development. Menguasai pembuatan antarmuka web menggunakan HTML &amp;
+                            CSS, dasar-dasar JavaScript, serta pemrograman Python dan SQL untuk
+                            pengolahan basis data.
+                        </p>
+
+                        <dl class="fakta">
+                            <dt>Kampus</dt>
+                            <dd>Universitas Gunadarma</dd>
+                            <dt>Program studi</dt>
+                            <dd>Informatika</dd>
+                            <dt>Fokus</dt>
+                            <dd>Web Development</dd>
+                        </dl>
+
+                        <div class="i">
+                            <i>
+                                "Sebuah kuote un kuote ga jelas yang memotivasi diri"
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="SKILL" id="SKILL">
+                <div class="judul">
+                    <h2>Skills</h2>
+                    <div class="separator"></div>
+                </div>
+                <div class="sub-konten skill">
+                    <div>
+                        <h3>Antarmuka web</h3>
+                        <p class="ket">Membangun tampilan halaman web.</p>
+                        <ul>
+                            <li><span>HTML</span><span class="tingkat kuat">Menguasai</span></li>
+                            <li><span>CSS</span><span class="tingkat kuat">Menguasai</span></li>
+                            <li><span>JavaScript</span><span class="tingkat">Dasar</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Pemrograman dan data</h3>
+                        <p class="ket">Mengolah data dan logika program.</p>
+                        <ul>
+                            <li><span>Python</span><span class="tingkat">Pemrograman</span></li>
+                            <li><span>SQL</span><span class="tingkat">Pengolahan basis data</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="SERTIFIKAT" id="SERTIFIKAT">
+                <div class="judul">
+                    <h2>Certificate</h2>
+                    <div class="separator"></div>
+                </div>
+                <div class="sub-konten sertifikat">
+                    <!-- Salin blok <article> ini untuk setiap sertifikat.
+                         Ganti judul, penerbit, tahun, gambar, dan link-nya. -->
+                    <article class="kartu-sertifikat">
+                        <div class="gambar">
+                            <!-- <img src="sertifikat-1.jpg" alt="Sertifikat Nama Sertifikat"> -->
+                            <img src="source/sertif-build_an_ai_agent.png" alt="Sertifikat Build an Ai Agent">
+                        </div>
+                        <div class="isi">
+                            <h3>Build an AI Agent</h3>
+                            <p>IBM SkillsBuild, 2026</p>
+                            <a href="https://www.credly.com/badges/af73b33a-44d0-4d8d-bc8b-c286b51696ed/public_url">Lihat sertifikat</a>
+                        </div>
+                    </article>
+                    <!-- <article class="kartu-sertifikat">
+                        <div class="gambar"> -->
+                            <!-- <img src="sertifikat-2.jpg" alt="Sertifikat Nama Sertifikat"> -->
+                        <!-- </div>
+                        <div class="isi">
+                            <h3>Nama sertifikat</h3>
+                            <p>Penerbit, tahun</p>
+                            <a href="#">Lihat sertifikat</a>
+                        </div>
+                    </article> -->
+                </div>
+            </section>
+
+            <section class="KONTAK" id="KONTAK">
+                <div class="judul">
+                    <h2>Contact</h2>
+                    <div class="separator"></div>
+                </div>
+                <div class="sub-konten kontak">
+                    <p class="pengantar">Tertarik berdiskusi soal web development atau ingin bekerja sama? Hubungi saya lewat salah satu kanal di bawah.</p>
+                    <!-- Ganti href dan teks .nilai dengan akun aslimu -->
+                    <ul>
+                        <li>
+                            <a href="mailto:ganihalims@gmail.com">
+                                <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                                <span class="nama">Email</span>
+                                <span class="nilai">ganihalims@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Ghaniyy123" target="_blank" rel="noopener">
+                                <span class="material-symbols-outlined" aria-hidden="true">code</span>
+                                <span class="nama">GitHub</span>
+                                <span class="nilai">github.com/Ghaniyy123</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/sulthan-ghaniyy-halim" target="_blank" rel="noopener">
+                                <span class="material-symbols-outlined" aria-hidden="true">work</span>
+                                <span class="nama">LinkedIn</span>
+                                <span class="nilai">linkedin.com/in/sulthan-ghaniyy-halim</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <footer class="kaki">
+                <p>&copy; 2026 Sulthan Ghaniyy Halim</p>
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
